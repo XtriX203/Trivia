@@ -1,0 +1,28 @@
+﻿<Window x:Class="trivia_client.bobspongeVideo"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:trivia_client"
+        mc:Ignorable="d"
+        Title="bobspongeVideo" Height="450" Width="800"
+        Background="Black">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="75" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <StackPanel>
+            <Button x:Name="back" Height="30" Width="75" FontSize="15" FontFamily="Gisha" FontWeight="Bold" BorderBrush="Black" BorderThickness="2" Background="White" Click="ButtonBack_Click" VerticalAlignment="Bottom" Content="Back"/>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Grid.ColumnSpan="2">
+            <MediaElement x:Name="mediaElement1" Source="bobsponge.mp4" LoadedBehavior="Play" SpeedRatio="1" IsMuted="False"/>
+        </StackPanel>
+    </Grid>
+</Window>
